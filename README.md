@@ -10,8 +10,8 @@ through a primary source data set.  I downloaded the publically available data o
 and explored the scope of the crisis using original analysis and visualizations.  My data is a subset of the full data set, but 
 I found that the numbers were, for me, a more viscerally affecting portrait of the AIDS crisis than I had seen in other sources.
 
-It consists of both a analysis I performed on the entire database, described with figures and text in a standard web-format as well as an area that users 
-can explore.  The interactive area is relatively rudimentary - it allows the user to select two locations from the AIDS database and 
+It consists of both a analysis I performed on the entire database (all code at https://github.com/InsightlyYours/AIDSDatabaseAnalysis), described, with figures and text, in a standard website as well as an interactive area that users 
+can explore.  The interactive area allows the user to select two locations from the AIDS database and 
 it will automatically generate plots that compare the AIDS crisis in those two location.
 
 It's pretty exciting!  Check it out!
