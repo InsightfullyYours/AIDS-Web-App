@@ -1,0 +1,59 @@
+{% extends "layout_perc.html" %}
+{% block title %}The Landscape of the AIDS Crisis{% endblock %}
+{% block body %}
+
+
+	<h2>The Landscape of the AIDS Crisis</h2>
+
+	<p>
+	The AIDS crisis, as discussed and shown in the previous sections, was marked by large and increasing numbers of diagnoses in the U.S.
+	In 1992, AIDS was the leading cause of death for U.S. men ages 25-44, and by 1994 it was the leading cause of death for all Americans of that age group.
+	The true devastation of the AIDS crisis was because it hit certain communities and ages much more than others.  The database includes the Age at Diagnosis
+	for all of the cases explored.  By looking at this data in different ways, we can gain a better sense of how the gay and other communities were devastated by AIDS.
+	Figure 3 shows the number of diagnoses sorted by the age at diagnosis.  As previously mentioned, diagnoses were most prevalent in the 25-44 age group.
+	However, it is interesting to note the rapid increase in diagnoses from the 13-19 age group to the 25-29 age group.  The 20-24 year age group is the period
+	of time in which many people in the U.S. move out of their parents’ homes or attend college, gain financial independence, and can fully participate in the community.
+	This increased freedom often brings with it increasing opportunities for sexual activity and experimentation with drugs, as well as responsibility for monitoring
+	one’s own health.
+	</p>
+
+	<br>
+
+	<figure>
+		<img src='/static/images/Figure3.png' alt='Pretty Figure' />
+		<figcaption>Figure 3:  AIDS Diagnoses by age group.</figcaption>
+	</figure>
+
+	<br>
+
+	<p>
+	In order to more fully explore the above data, we can further break the data in Figure 3 by the year of diagnosis, as shown in Figure 4.
+	In both plots of Figure 4, the x-axis is the year of diagnosis, the y-axis is the age category at diagnosis, and the z-axis, here denoted using a heat map,
+	is the number of cases.  The top plot has a linear z-axis in order to highlight the broad trends in the data while the bottom plot has a logarithmic
+	z-axis in order to highlight subtle variations in the same data. In broad strokes it validates the previous assertions, but there are interesting
+	details that should be noted.  For example, the AIDS outbreak began with diagnoses of people age 25-44, and the majority of cases conformed to
+	that age range throughout the data set.  From 1992-1995, however, the data indicates a widening of the age range, primarily towards those 45 and up.
+	After the peak in diagnoses, the data indicates a narrowing of the age range until primarily 30-45 year olds are being diagnosed.
+	This is the same population of potential cases as the 20-29 age group from 1992-1995, indicating the widening of the age range is due to
+	the same population of people.  This may be due to different preventative practices employed by members of that age group, or a different
+	transmission mechanism.  Later analysis will investigate this.  The bottom plot of Figure 4, with the logarithmic z-axis, also contains some data of note.
+	It shows that pediatric cases (Age less than 19 for this analysis) start to be diagnosed primarily around 1985 and don’t begin to decrease again until 1997.
+	While the number of these cases is comparatively small (see Figure 3), they will be investigated further in a later analysis.
+	</p>
+
+
+	<figure>
+		<img src='/static/images/Figure4a.png' alt='Pretty Figure' />
+		<img src='/static/images/Figure4b.png' alt='Pretty Figure' />
+		<figcaption>Figure 4:  Top/Left: A plot of the number of cases diagnosed per year, separated by the age group of the patient.  Bottom/Right: The same plot, except the z-axis (Cases Diagnosed) is on a log scale to highlight more subtle evolutions in the Age at diagnosis with year.</figcaption>
+	</figure>
+
+    <div style="visibility: hidden">
+        <br><br><br><br><br><br>
+    </div>
+
+	<div class="footer">
+		<a href={{ url_for('CrisisShape') }} style="padding:10px;cursor:pointer">Previous: The Shape of the AIDS Crisis</a>
+		<a href={{ url_for('CrisisCauses') }} style="padding:10px;cursor:pointer">Next: The Causes of Infection</a>
+	</div>
+{% endblock %}

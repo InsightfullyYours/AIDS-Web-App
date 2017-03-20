@@ -1,0 +1,46 @@
+{% extends "layout_perc.html" %}
+{% block title %}The Shape of the AIDS Crisis{% endblock %}
+{% block body %}
+
+	<h2>The Shape of the AIDS Crisis</h2>
+
+	<p>
+	We begin the analysis with a broad overview of the AIDS crisis.  The section of the database we are exploring includes 859,000 diagnoses, or about 41,000
+	diagnoses per month.  The true shape of the crisis can be seen in Figure 1, which plots the number of AIDS diagnoses in America by month between
+	January 1981 and December 2002.  The initial spike at 1981 is because the public database aggregates all the 1981 diagnoses to preserve the anonymity of the 270
+	initial victims.  The rapid decrease in the plot at the end of 2002 is not due to a drop in diagnoses, but instead the termination of data aggregation for the database.
+	</p>
+
+	<br>
+
+	<figure>
+		<img src='/static/images/Figure1.png' alt='Pretty Figure' />
+		<figcaption>Figure 1: AIDS diagnoses by month from January 1981-December 2002.  The initial spike at 1981 is because the data for 1981 is not separated by month, partly to preserve anonymity.</figcaption>
+	</figure>
+
+	<br>
+
+	<p>
+	The shape of the AIDS crisis is evident in Figure 1.  An initial increase to about 1000 diagnoses per month by 1985, followed by a more rapid increase
+	and maximum rate of diagnoses at the end of 1992 and early 1993.  From there, there is a decrease in the rate of AIDS diagnoses.  Despite the decrease
+	in the rate of new diagnoses shown in Figure 1, the total number of AIDS diagnoses in the U.S. continued to grow at an alarming rate, as shown in Figure 2.
+	The 859,000 diagnoses captured in this section of the database constitute more than of the entire Population of Alaska or Wyoming in 2014.
+	</p>
+
+	<br>
+
+	<figure>
+		<img src='/static/images/Figure2.png' alt='Pretty Figure' />
+		<figcaption>Figure 2: The cumulative number of AIDS diagnoses in America between January 1981 and December 2002.</figcaption>
+	</figure>
+
+    <div style="visibility: hidden">
+        <br><br><br><br><br><br>
+    </div>
+
+	<div class="footer">
+		<a href={{ url_for('DatabaseDetails') }} style="padding:10px;cursor:pointer">Previous: Database Details</a>
+		<a href={{ url_for('CrisisLandscape') }} style="padding:10px;cursor:pointer">Next: The Landscape of the AIDS Crisis</a>
+	</div>
+
+{% endblock %}

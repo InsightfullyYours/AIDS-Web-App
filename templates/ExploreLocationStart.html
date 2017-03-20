@@ -1,0 +1,60 @@
+{% extends "layout_perc.html" %}
+{% block title %}Explore the AIDS Crisis Through Location Data{% endblock %}
+{% block body %}
+    <h2>Explore the AIDS Crisis Through Location Data: Input</h2>
+
+    <p>
+        Thank you for being patient!
+    </p>
+
+    <p>
+        The analysis up until this point has been curated;
+        it looked at the broad parameters of the AIDS Crisis.  All data previously
+        discussed was also separated by the metropolitan or non-metropolitan area
+        in which the cases occured.  This dimension of the data was not explored.
+    </p>
+
+    <p>
+        This page allows you to explore the database used in this analysis based on
+        geographical location(s).  Select up to two locations from the drop down
+        menus and the data will be plotted using many of the plots previously discussed.
+        By examining these plots side-by-side, you can discover regional variations
+        in AIDS diagnoses, sources of infection, mortality, and age groups.
+    </p>
+
+    <h3>Please select the first location</h3>
+
+    <form action={{ url_for('ExploreLocationFinal') }} method="post">
+        <select name=CityOne>
+            {% for entry in entries %}
+                <option value="{{ entry }}">{{ entry }} </option>
+            {% else %}
+                <option>Error!  No values passed in!</option>
+            {% endfor %}
+        </select>
+
+        <h3>Please select the second location.  Unfortunately, you currently have to select two.
+        Feel free to select the same two.  The plots will be duplicates of each other.
+        </h3>
+
+        <select name=CityTwo>
+            {% for entry in entries %}
+                <option value="{{ entry }}">{{ entry }} </option>
+            {% else %}
+                <option>Error!  No values passed in!</option>
+            {% endfor %}
+        </select>
+
+        <br><br>
+        <input type="submit" value="Submit!  Please be Patient...">
+    </form>
+
+
+    <div style="visibility: hidden">
+        <br><br><br><br><br><br>
+    </div>
+
+  	<div class="footer">
+		<a href={{ url_for('ExploreLocationStart') }} style="padding:10px;cursor:pointer">Reset Page</a>
+	</div>
+{% endblock %}

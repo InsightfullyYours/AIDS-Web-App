@@ -1,0 +1,50 @@
+{% extends "layout_perc.html" %}
+{% block title %}Final Thoughts on the AIDS Crisis{% endblock %}
+{% block body %}
+
+	<h2>Final Thoughts on the AIDS Crisis</h2>
+
+	<p>
+	The AIDS crisis in the U.S. was the defining U.S. public health crisis of the late 20th century.  AIDS devastated families and communities and was,
+	for a time, the leading cause of death for all Americans between the ages of 25 and 44.  It also took place as the accessibility and prevalence of
+	computers increased, allowing a more rapid tabulation of data and search for understanding.  Much of that data is now available to the public.
+	By analyzing that data, we can explore the evolution and landscape of the AIDS crisis and see its major impact on the gay community of the late 20th century.
+	We have analyzed the data based upon year of diagnosis, HIV exposure mechanism, and the age range at diagnosis.  The resulting graphs were discussed in the
+	context of the AIDS crisis and its effects on the gay community in the U.S. of the late 20th century.  The graph that presents the most direct visualization
+	of this effect is shown below.  Figure 10 shows the devastation of the early years, when an AIDS diagnosis was a death sentence.  It shows the incremental
+	success of AZT, the first antiretroviral drug (FDA approved March 19, 1987), as well as the success of the HAART methodology in decreasing AIDS mortality.
+	</p>
+
+	<br>
+
+	<figure>
+		<img src='/static/images/Figure10.png' alt='Pretty Figure' />
+		<figcaption>Figure 10: The cumulative number of AIDS diagnoses in America between January 1981 and December 2002 (Figure 2) overlaid with the number of those cases that proved mortal.</figcaption>
+	</figure>
+
+	<br>
+
+	<p>
+	The CDC Wonder AIDS database presents a comprehensive chronicle of one of the greatest public health crises in the last fifty years, which is why it was chosen.
+	This analysis quantifies and presents the scope and impact of the AIDS crisis in the U.S. in a way that is simple but effective, producing in a few graphs a
+	clear picture of the devastation wrought on the gay community by AIDS.  It also highlights the importance of data collection to public health – without complete
+	patient histories and robust data analysis the ability to trace new outbreaks and transmission methods may be compromised.
+	</p>
+
+	<br>
+
+	<p>
+	We now invite you to explore a part of the database that was not discussed up to this point: the Location data.  Please use the menu or the navigation buttons
+	to go to the Explore the AIDS Crisis Through Location Data section to further investigate the database.
+	</p>
+
+    <div style="visibility: hidden">
+        <br><br><br><br><br><br>
+    </div>
+
+	<div class="footer">
+		<a href={{ url_for('CrisisMortality') }} style="padding:10px;cursor:pointer">Previous: Mortality During the AIDS Crisis</a>
+		<a href={{ url_for('ExploreLocationStart') }} style="padding:10px;cursor:pointer">Next: Explore the AIDS Crisis Through Location Data (Please Be Patient!)</a>
+	</div>
+
+{% endblock %}

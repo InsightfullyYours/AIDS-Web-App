@@ -1,0 +1,133 @@
+{% extends "layout_perc.html" %}
+{% block title %}Explore the AIDS Crisis Through Location Data{% endblock %}
+{% block body %}
+
+    <h2>Explore the AIDS Crisis Through Location Data: Results</h2>
+
+    <br>
+
+    <p>For the first city or region, you selected: {{ CityOne }}</p>
+    <p>For the second city or region, you selected: {{ CityTwo }}</p>
+
+    <p>
+        The plots of your results are below!
+    </p>
+
+    <p>
+        Note that plots that appear shifted are due to a lack of data at those conditions.
+        If there are no diagnoses in 1982, for example, 1982 will not be in the dataset and therefore won't be graphed at all.
+    </p>
+
+    <figure>
+        <img src='/static/images/C1F1.png' alt='Pretty Figure' />
+        <img src='/static/images/C2F1.png' alt='Pretty Figure' />
+        <figcaption>Figure 1 By City: AIDS diagnoses by month from January 1981-December 2002.  The initial spike at 1981 is because the data for 1981 is not separated by month, partly to preserve anonymity.</figcaption>
+    </figure>
+
+    <br><br>
+
+    <figure>
+        <img src='/static/images/C1F2.png' alt='Pretty Figure' />
+        <img src='/static/images/C2F2.png' alt='Pretty Figure' />
+        <figcaption>Figure 2 By City: The cumulative number of AIDS diagnoses in America between January 1981 and December 2002.</figcaption>
+    </figure>
+
+    <br><br>
+
+    <figure>
+        <img src='/static/images/C1F3.png' alt='Pretty Figure' />
+        <img src='/static/images/C2F3.png' alt='Pretty Figure' />
+        <figcaption>Figure 3 By City: AIDS Diagnoses by age group.</figcaption>
+    </figure>
+
+    <br><br>
+
+    <figure>
+        <img src='/static/images/C1F4a.png' alt='Pretty Figure' />
+        <img src='/static/images/C2F4a.png' alt='Pretty Figure' />
+        <figcaption>Figure 4a By City: A plot of the number of cases diagnosed per year, separated by the age group of the patient. </figcaption>
+    </figure>
+
+    <br><br>
+
+    <figure>
+        <img src='/static/images/C1F4b.png' alt='Pretty Figure' />
+        <img src='/static/images/C2F4b.png' alt='Pretty Figure' />
+        <figcaption>Figure 4b By City: The same plot, except the z-axis (Cases Diagnosed) is on a log scale to highlight more subtle evolutions in the Age at diagnosis with year.</figcaption>
+    </figure>
+
+    <br><br>
+
+    <figure>
+        <img src='/static/images/C1F5.png' alt='Pretty Figure' />
+        <img src='/static/images/C2F5.png' alt='Pretty Figure' />
+        <figcaption>Figure 5 Linear Scale By City: Sources of HIV exposure and the Number of Diagnoses for each in linear y-scale in order to highlight the primary exposure mechanisms.  </figcaption>
+    </figure>
+
+    <br><br>
+
+    <figure>
+        <img src='/static/images/C1F5log.png' alt='Pretty Figure' />
+        <img src='/static/images/C2F5log.png' alt='Pretty Figure' />
+        <figcaption>Figure 5 Log Scale By City: Sources of HIV exposure and the Number of Diagnoses for each in log y-scale in order to highlight the lower order exposure mechanisms and their relative prevalence.  </figcaption>
+    </figure>
+
+    <br><br>
+
+    <figure>
+        <img src='/static/images/C1F6a.png' alt='Pretty Figure' />
+        <img src='/static/images/C2F6a.png' alt='Pretty Figure' />
+        <figcaption>Figure 6a By City: plot of the number of cases diagnosed per year, separated by HIV exposure mechanism. </figcaption>
+    </figure>
+
+    <br><br>
+
+    <figure>
+        <img src='/static/images/C1F6b.png' alt='Pretty Figure' />
+        <img src='/static/images/C2F6b.png' alt='Pretty Figure' />
+        <figcaption>Figure 6b By City: The same plot, except the z-axis (Cases Diagnosed) is on a log scale to highlight more subtle evolutions in the HIV exposure mechanism with year.</figcaption>
+    </figure>
+
+    <br><br>
+
+    <figure>
+        <img src='/static/images/C1F7.png' alt='Pretty Figure' />
+        <img src='/static/images/C2F7.png' alt='Pretty Figure' />
+        <figcaption>Figure 7 By City: HIV transmission method compared to the age at diagnosis.</figcaption>
+    </figure>
+
+    <br><br>
+
+    <figure>
+        <img src='/static/images/C1F8.png' alt='Pretty Figure' />
+        <img src='/static/images/C2F8.png' alt='Pretty Figure' />
+        <figcaption>Figure 8 By City: Percent mortality by Age at Diagnosis and Year.</figcaption>
+    </figure>
+
+    <br><br>
+
+    <figure>
+        <img src='/static/images/C1F9.png' alt='Pretty Figure' />
+        <img src='/static/images/C2F9.png' alt='Pretty Figure' />
+        <figcaption>Figure 9 By City: Percent mortality by HIV exposure route.</figcaption>
+    </figure>
+
+    <br><br>
+
+    <figure>
+        <img src='/static/images/C1F10.png' alt='Pretty Figure' />
+        <img src='/static/images/C2F10.png' alt='Pretty Figure' />
+        <figcaption>Figure 10 By City: The cumulative number of AIDS diagnoses in America between January 1981 and December 2002 (Figure 2) overlaid with the number of those cases that proved mortal.</figcaption>
+    </figure>
+
+
+    <div style="visibility: hidden">
+        <br><br><br><br><br><br>
+    </div>
+
+    <div class="footer">
+		<a href={{ url_for('ExploreLocationStart') }} style="padding:10px;cursor:pointer">Start Over (Please Be Patient!)</a>
+	</div>
+
+
+{% endblock %}

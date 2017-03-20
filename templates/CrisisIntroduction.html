@@ -1,0 +1,37 @@
+{% extends "layout_perc.html" %}
+{% block title %}The AIDS Crisis in the U.S.: Introduction{% endblock %}
+{% block body %}
+
+	<h2>The AIDS Crisis in the U.S.: Introduction</h2>
+
+	<p>
+	The AIDS crisis of the late 20th century was the defining public health emergency of a generation; a crisis caused by a disease
+	whose initial spread outpaced the ability for scientists to determine its rates and transmission methods.  The first official reporting
+	on AIDS came on June 5th, 1981 in the U.S. Centers for Disease Control and Prevention (CDC)’s Morbidity and Mortality Weekly Report (MMWR).
+	The initial report described five young gay men in Los Angeles who had contracted a rare lung infection and a number of other rare infections
+	characteristic of severely immunosuppressed patients.  After press coverage of the MMWR,the CDC received numerous reports about similar groupings
+	of rare and opportunistic infections among gay men across the country.  By the end of 1981, there were a cumulative total of 270 cases of severely
+	immunosuppressed gay patients; 121 of those cases had already proved fatal.  Despite the efforts of government and researches, HIV/AIDS continued
+	to spread throughout the 1980s and 1990s; by 1994, HIV/AIDS had become the leading cause of death in the U.S. for people aged 25-44 years old.
+	</p>
+
+	<p>
+	The AIDS crisis is one of the first large-scale public health crises to take place during the relative availability of computer computation.
+	The early 1980s saw the release of the Commodore 64, the IBM personal computer, and the Macintosh.  The data that was collected during the
+	crisis was therefore more comprehensive and easily correlated than that in previous crises.  The identification of transmission methods and the
+	identification of the retrovirus that causes AIDS as well as the concurrent development of a diagnostic blood test are all,
+	in many ways, due to the breadth and depth of data available to researchers for the first time.  Many writers, for example, credit the sharing
+	of research data between the American scientist Robert Gallo and the French scientist Luc Montagnier for the breakthrough understanding that
+	AIDS is a retrovirus primarily transmitted through blood and sexual fluids.  The data collected both during and after the AIDS crisis in America
+	is available in anonymized form online from the <a href=https://wonder.cdc.gov/aidspublic.html>CDC WONDER AIDS Database<a>.
+	This project aims to explore the data available from 1981-2002 in order to quantify the devastation wrought by the AIDS crisis.
+	</p>
+
+    <div style="visibility: hidden">
+        <br><br><br><br><br><br>
+    </div>
+
+	<div class="footer">
+		<a href={{ url_for('DatabaseDetails') }} style="padding:10px;cursor:pointer">Next: Database Details</a>
+	</div>
+{% endblock %}

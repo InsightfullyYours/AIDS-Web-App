@@ -1,0 +1,57 @@
+{% extends "layout_perc.html" %}
+{% block title %}Database Details{% endblock %}
+{% block body %}
+
+	<h2>Database Details</h2>
+
+	<p>
+	The <a href=https://wonder.cdc.gov/aidspublic.html>CDC WONDER AIDS Database</a> is a wealth of information that should be explored in its entirety.
+	Due to time constraints, this project looks at a specific subset of the data.  This project focuses on the Location, Month of Diagnosis, Age at Diagnosis,
+	HIV Exposure Category, and Vital Status.  The Location provides the metropolitan area of the case and can be explored on this website.  The Month of Diagnosis
+	spans from January 1981 (the generally agreed upon beginning of the epidemic, as defined by collected data) through December 2002.  The Age at Diagnosis spans
+	from birth to 65+, in 13 age groups.  The HIV Exposure Categories are:
+	</p>
+
+	<ul>
+		<li>Hemophilia/coagulation disorder</li>
+		<li>Heterosexual contact</li>
+		<li>IV drug use (females and heterosexual males)</li>
+		<li>Male homo/bisexual and IV drug use</li>
+		<li>Male homo/bisexual contact</li>
+		<li>Mother with HIV or HIV risk</li>
+		<li>Pediatric hemophilia</li>
+		<li>Pediatric receipt of blood</li>
+		<li>Pediatric risk not reported or indentified</li>
+		<li>Receipt of blood, blood components or tissue</li>
+		<li>Risk not reported or identified</li>
+	</ul>
+
+	<p>
+	The Vital Status code defines whether the patient was reported deceased before 2001 or not. (The cause of death is not included in the public database,
+	so this report may include causes of death unrelated to the HIV/AIDS diagnosis). The Vital Status is not publically available after 2000 in order to
+	protect the identities of patients from de-anonymization.  The data has not been modified to account for age-linked mortality.  This analysis is limited
+	to cases in which all five categories are provided in the publically available database.  For this reason, this analysis may under-count.  The implications
+	that are discussed are therefore limited to the data set as it is used.
+	</p>
+
+	<br>
+
+	<h3>Citations: </h3>
+	<p>Database:</p>
+	<p>US Department of Health and Human Services (US DHHS), Centers for Disease Control and Prevention (CDC),National Center for HIV, STD and
+	TB Prevention (NCHSTP), AIDS Public Information Data Set (APIDS) US Surveillance Data for 1981-2002, CDC WONDER On-line Database, December
+	2005. Accessed at http://wonder.cdc.gov/aids-v2002.html on Mar 9, 2017 2:35:16 PM
+	</p>
+
+	<p>History:</p>
+	<a href="https://www.aids.gov/hiv-aids-basics/hiv-aids-101/aids-timeline/">https://www.aids.gov/hiv-aids-basics/hiv-aids-101/aids-timeline/</a>
+
+    <div style="visibility: hidden">
+        <br><br><br><br><br><br>
+    </div>
+
+	<div class="footer">
+		<a href={{ url_for('CrisisIntroduction') }}>Previous: Introduction</a>
+		<a href={{ url_for('CrisisShape') }}>Next: The Shape of the AIDS Crisis</a>
+	</div>
+{% endblock %}

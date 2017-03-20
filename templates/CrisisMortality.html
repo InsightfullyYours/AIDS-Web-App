@@ -1,0 +1,56 @@
+{% extends "layout_perc.html" %}
+{% block title %}Mortality During the AIDS Crisis{% endblock %}
+{% block body %}
+
+	<h2>Mortality During the AIDS Crisis</h2>
+
+	<p>
+	This analysis of the AIDS Crisis has, up to this point, focused on the diagnosis of AIDS.  The analysis of the ages at diagnosis and method of
+	HIV transmission highlight the prevalence of AIDS in a single community: the gay community of the late 20th century.  This analysis confirmed that the
+	primary transmission method was male homosexual/bisexual contact and the primary age range was 25-44.  The numbers discussed are stark, but true effect of
+	the AIDS crisis on the gay community is reflected in the Vital Status of each diagnosis, which tracks whether the patient was reported deceased before 2001
+	(independent of cause of death).
+	</p>
+
+	<p>
+	Figure 8 shows the percent mortality by age of diagnosis and year.  This is calculated by dividing the number of diagnoses that ended in mortality
+	by 2001 by the total diagnoses for that slice of the data.  This metric is not adjusted for age-linked mortality rates or normalized by the number of cases.
+	It is a stark graph: mortality is above 80% for most age ranges until about 1993, and is above 95% for many years and age ranges (particularly in patients
+	over 50 years old).  This reflects both the comparative frailty of the patients upon diagnosis as well as the decrease in life expectancy as humans age.
+	What is particularly striking about the graph is the sharp decrease in mortality that appears to occur between 1990 and 1995.  The difference in age-linked
+	mortality, though, makes it unclear whether it is a real or apparent effect.  Figure 9 plots the same metric as Figure 8, except against HIV Exposure Mechanism
+	rather than age group at diagnosis.  The decrease in mortality is preserved and it becomes clear that something major occurred to decrease the rates of mortality
+	due to AIDS during those five years.
+	</p>
+
+	<p>
+	This was the beginning of the era of Highly Active Antiretroviral Therapy (HAART), the daily use of a combination of HIV medicines to treat the infection.
+	The first protease inhibitor was approved by the FDA in June of 1995.  In June, 1996, the FDA approved the first non-nucleoside reverse transcriptase inhibitor
+	drug.  In 1997, HAART becomes the standard of HIV care, the first combination antiretroviral drug was approved by the FDA, and the CDC reported a 47% decline
+	in AIDS-related deaths over the previous year.  While AIDS was not cured, this is the era where it starts transitioning from a disease with >90% mortality
+	to an incurable but survivable infection.  The data show the magnitude of this transition in stark relief.
+	</p>
+
+	<br>
+
+	<figure>
+		<img src='/static/images/Figure8.png' alt='Pretty Figure' />
+		<figcaption>Figure 8:  Percent mortality by Age at Diagnosis and Year.</figcaption>
+	</figure>
+
+	<br>
+
+	<figure>
+		<img src='/static/images/Figure9.png' alt='Pretty Figure' />
+		<figcaption>Figure 9:  Percent mortality by HIV exposure route.</figcaption>
+	</figure>
+
+    <div style="visibility: hidden">
+        <br><br><br><br><br><br>
+    </div>
+
+	<div class="footer">
+		<a href={{ url_for('CrisisCauses') }} style="padding:10px;cursor:pointer">Previous: The Causes of Infection</a>
+		<a href={{ url_for('CrisisFinalThoughts') }} style="padding:10px;cursor:pointer">Next: Final Thoughts on the AIDS Crisis</a>
+	</div>
+{% endblock %}

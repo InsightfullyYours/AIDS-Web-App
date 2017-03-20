@@ -1,0 +1,87 @@
+{% extends "layout_perc.html" %}
+{% block title %}The Causes of Infection{% endblock %}
+{% block body %}
+
+
+	<h2>The Causes of Infection</h2>
+
+	<p>
+	We have previously looked at both the scale and demographics of the AIDS epidemic in the U.S. between January 1981 and December 2002.
+	In broad strokes, the AIDS epidemic was diagnosed primarily in individuals between 25 and 44 years in age.  Further investigation into
+	the changing diagnosis age range with year indicated that there were interesting changes worth further study.  There was a broadening
+	in the age range of diagnosis around 1992, with that same group ageing into the most prevalent age group for diagnoses 5-10 years later.
+	Pediatric cases also started to be diagnosed beginning around 1985, and only decreased again around 1997.  In this section we investigate these changes
+	by looking at the mechanisms by which diagnosed patients were exposed to HIV/AIDS.
+	</p>
+
+	<p>
+	Figure 5 graphs the number of diagnoses against the mechanism of transmission of the HIV virus for all years in the database.
+	The primary documented transmission route during the AIDS crisis was male homosexual/bisexual contact, supporting our initial discussion about the
+	impact of AIDS on the gay community of the 1990s.  There were 859,000 diagnoses in the database; about half of them were due to male homosexual/bisexual contact.
+	That is an enormous number of individuals to be concentrated in a comparatively small community.  The second transmission route is IV drug use, followed by
+	heterosexual transmission of HIV.  This appears to explain the primary age ranges of infection – 25-44 year olds are at heightened risk of sexually transmitted
+	diseases and are the primary users of IV drugs.  The bottom graph of Figure 5, with its logarithmic y-axis, again highlights some interesting numbers.
+	</p>
+
+	<p>
+	Blood transfusions to adults and people with hemophiliac/coagulation disorders were a significant source of secondary infection during the crisis.
+	AIDS transmission through blood transfusion was first reported by the CDC on December 10, 1982, very early in the AIDS crisis.  Widespread screening
+	of the U.S. blood bank supplies did not begin until March 2, 1985 when the first commercial blood test was licensed.  Pediatric transmission was primarily
+	from the mother, as the numbers of pediatric transfusion cases were very small.  These differing rates may be due to the relative prevalence of mothers with HIV
+	compared to the rate of administered pediatric transfusions.
+	</p>
+
+	<br>
+
+	<figure>
+		<img src='/static/images/Figure5.png' alt='Pretty Figure' />
+		<figcaption>Figure 5:  Sources of HIV exposure and the Number of Diagnoses for each.  The top plot has a linear y-axis in order to highlight the primary exposure mechanisms.  The bottom plot has a logarithmic y-axis in order to highlight the lower order exposure mechanisms and their relative prevalence.</figcaption>
+	</figure>
+
+	<br>
+
+	<p>
+	We again break the transmission method down by diagnosis year in order to more fully explore the numbers in Figure 5.
+	Figure 6 separates the HIV transmission method down by year of diagnosis.  The top plot has a linear z-scale, while the bottom plot has a
+	logarithmic z-scale in order to highlight more subtle evolutions in the method of HIV transmission with time.  The top plot confirms that
+	there were additional cases diagnosed between 1992 and 1995 that may correspond to the widening of the age distribution of cases seen previously in Figure 4.
+	The additional cases are due to new transmission mechanisms that were, in general, not identified at large scales previous to 1992: IV drug use by heterosexual
+	men and women, IV drug use by homo/bisexual men, and heterosexual contact with HIV.  The bottom graph shows those mechanisms were present as early as 1985, but
+	as a much smaller fraction of diagnosed cases.  Comparing the two graphs indicates that much of the increase in diagnoses was due to IV drug use by heterosexual
+	men and women.  This is most likely due to the relative number of people in each population.  This highlights the importance of the needle exchange programs that
+	began during those years – they may be one of the primary reasons for the decrease in HIV transmission through IV drug use from 1997 on.  The bottom plot also
+	confirms that the major pediatric transmission source was the mother, most likely during pregnancy.
+	</p>
+
+	<br>
+
+	<figure>
+		<img src='/static/images/Figure6a.png' alt='Pretty Figure'/>
+		<img src='/static/images/Figure6b.png' alt='Pretty Figure'/>
+		<figcaption>Figure 6: Top/Left: A plot of the number of cases diagnosed per year, separated by HIV exposure mechanism.  Bottom/Right: The same plot, except the z-axis (Cases Diagnosed) is on a log scale to highlight more subtle evolutions in the HIV exposure mechanism with year.</figcaption>
+	</figure>
+
+	<br>
+
+	<p>
+	We further confirm the above conclusions by comparing the HIV transmission method to the age at diagnosis.  This is shown in Figure 7, confirming both
+	the narrow age ranges affected as well as the prevalence of male homosexual/bisexual contact as the transmission source.  This analysis confirms and highlights
+	that the gay community was the group primarily affected by the AIDS crisis of the late 20th century.
+	</p>
+
+	<br>
+
+	<figure>
+		<img src='/static/images/Figure7.png' alt='Pretty Figure'/>
+		<figcaption>Figure 7: HIV transmission method compared to the age at diagnosis.</figcaption>
+	</figure>
+
+    <div style="visibility: hidden">
+        <br><br><br><br><br><br>
+    </div>
+
+	<div class="footer">
+		<a href={{ url_for('CrisisLandscape') }} style="padding:10px;cursor:pointer">Previous: The Landscape of the AIDS Crisis</a>
+		<a href={{ url_for('CrisisMortality') }} style="padding:10px;cursor:pointer">Next: Mortality During the AIDS Crisis</a>
+	</div>
+{% endblock %}

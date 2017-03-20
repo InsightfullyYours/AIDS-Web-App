@@ -1,0 +1,152 @@
+<!doctype html>
+<title>{% block title %}Exploring the CDC WONDER AIDS Database{% endblock %} Exploring the CDC WONDER AIDS Database </title>
+<!--
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+-->
+<head>
+	<style>
+		body {
+			font-size: 100%
+			font-family: Avenir,Futura, Georgia, sans-serif;
+		}
+
+		h1 {
+			font-size: 120%
+			font-family: Avenir,Futura, Georgia, sans-serif;
+		}
+
+		h2 {
+			font-size: 110%
+			font-family: Avenir,Futura, Georgia, sans-serif;
+		}
+
+		p {
+			font-size: 100%
+			font-family: Avenir,Futura, Georgia, sans-serif;
+		}
+
+		figurecaption {
+			font-size: 80%
+			font-family: Avenir,Futura, Georgia, sans-serif;
+		}
+
+		.menu {
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #f1f1f1;
+            z-index: 999;
+			position: fixed;
+			top: 0;
+			width: 100%;
+			font-family: Avenir,Futura, Georgia, sans-serif;
+		}
+
+        .body {
+			position: absolute;
+			top: 150px;
+			font-family: Avenir,Futura, Georgia, sans-serif;
+            z-index: 997;
+        }
+
+        .footer {
+        	margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #f1f1f1;
+            z-index: 998;
+			position: fixed;
+			bottom: 0;
+			width: 100%;
+			font-family: Avenir,Futura, Georgia, sans-serif;
+        }
+
+      	.sidenav {
+			height: 100%;
+			width: 0;
+			position: fixed;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			background-color: #111;
+			overflow-x: hidden;
+			transition: 0.5s;
+			padding-top: 60px;
+		}
+
+		.sidenav a {
+			padding: 8px 8px 8px 32px;
+			text-decoration: none;
+			font-size: 120%;
+			color: #818181;
+			display: block;
+			transition: 0.3s
+		}
+
+		.sidenav a:hover, .offcanvas a:focus{
+			color: #f1f1f1;
+		}
+
+		.sidenav .closebtn {
+			position: absolute;
+			top: 0;
+			right: 25px;
+			font-size: 200%;
+			margin-left: 50px;
+		}
+
+		#main {
+			transition: margin-left .5s;
+			padding: 16px;
+		}
+
+		@media screen and (max-height: 450px) {
+		  .sidenav {padding-top: 15px;}
+		  .sidenav a {font-size: 100%;}
+		}
+	</style>
+</head>
+
+<body id="main">
+
+	<div class="menu">
+		<h1 style="padding:10px;margin-top:10px">The AIDS Crisis in the U.S.: 1981-2002</h1>
+
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href={{ url_for('CrisisIntroduction') }}>The AIDS Crisis in the U.S.: Introduction</a>
+			<a href={{ url_for('DatabaseDetails') }}>Database Details</a>
+			<a href={{ url_for('CrisisShape') }}>The Shape of the AIDS Crisis</a>
+			<a href={{ url_for('CrisisLandscape') }}>The Landscape of the AIDS Crisis</a>
+			<a href={{ url_for('CrisisCauses') }}>The Causes of Infection</a>
+			<a href={{ url_for('CrisisMortality') }}>Mortality During the AIDS Crisis</a>
+			<a href={{ url_for('CrisisFinalThoughts') }}>Final Thoughts on the AIDS Crisis</a>
+			<a href={{ url_for('ExploreLocationStart') }}>Explore the AIDS Crisis Through Location Data (Please Be Patient!)</a>
+		</div>
+
+		<div>
+			<span style="padding:10px;font-size:167%;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+		</div>
+	</div>
+
+	<div class="body">
+
+		{% block body %}{% endblock %}
+
+	</div>
+
+	<script>
+		function openNav() {
+			document.getElementById("mySidenav").style.width = "250px";
+			document.getElementById("main").style.marginLeft = "250px";
+		}
+
+		function closeNav() {
+			document.getElementById("mySidenav").style.width = "0";
+			document.getElementById("main").style.marginLeft= "0";
+		}
+	</script>
+
+</body>
+
+</body>
