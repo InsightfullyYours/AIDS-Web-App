@@ -1,8 +1,8 @@
 # AIDS-Web-App
-This is the source code for a webapp that I wrote as a submission to the Insight Health Data Science program.  
+This is the source code for a webapp that I wrote as an application submission to the Insight Health Data Science program.  
 It's a fairly simple one that can be found at:    http://insightfullyyours.pythonanywhere.com/
 
-The username and password are both currently "Insight" (without quotes) if you'd like to play around with it a bit.
+It has now been rolled into a more comprehensive website whose source code is discussed in the Insight Project repository.
 
 My project analyses data from the AIDS Crisis of the 1980s and 1990s.  There has been extensive journalistic and artistic 
 coverage of this period in American history; however, as a data scientist, I wanted to interpret and analyze the period 
